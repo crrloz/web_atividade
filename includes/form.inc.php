@@ -1,18 +1,7 @@
 <?php
 $tam = strlen($_POST['prim_txt']);
 
-function emptyInput($tam){
-    $result;
-    if(empty($tam)){
-        $result = true;
-    }
-    else {
-        $result = false;
-    }
-    return $result;
-}
-
-if(emptyInput($tam) !== false){
+if(empty($tam)){
     header("location: ../form.php?error=emptyinput");
     exit();
 } else {
